@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><p id="demo"></p></div>
+
+    <script>
+      //var possui hosting
+      //let nao existe hosting
+      //const nao possui hosting
+
+      /* function criadora(nome, idade, formacao) {
+         let pessoa = {
+           nome: nome,
+           idade: idade,
+           formacao: formacao,
+         };
+
+         return pessoa;
+       }
+       let pessoaA = criadora("matheus", 23, [
+         "matematicas",
+         "fisica",
+         "quimica",
+       ]);
+       console.log(pessoaA);*/
+      /*criando um sistema de notas
+       * de 90 para cima - A
+       * entre 80-89 -- B
+       * entre 70-79 --C
+       * entre 60-60 --D
+       * menor que 60 --F
+       */
+      /* function notaAlunos(n) {
+         if (n >= 90) {
+           console.log("a nota do aluno foi A");
+         } else if (n >= 80 && n <= 89) {
+           console.log("a nota do aluno foi B");
+         } else if (n >= 70 && n <= 79) {
+           console.log("a nota do aluno foi C");
+         } else if (n >= 60 && n <= 69) {
+           console.log("a nota do aluno foi D");
+         } else if (n < 60) {
+           console.log("a nota do aluno foi E");
+         }
+       }
+
+       notaAlunos(98);*/
+      /*let array = [1, 5, 4, 3, 5, 6];
+      let soma = 0;
+      for (i = 0; i < array.length; i++) {
+        soma += array[i];
+      }
+      console.log(soma);*/
+      /*let fatorial;
+      function fatoriaL(n) {
+        if (n === 1) {
+          return 1;
+        }
+        fatorial = n * fatoriaL(n - 1);
+
+        return fatorial;
+      }
+      fatoriaL(3);
+      console.log(fatorial);*/
+      //sistema de renda familiar
+
+      /*let familia = {
+        receita: [13.3, 43, 456, 67],
+        despesas: [223, 54.5, 34, 567],
+      };
+      function calculo() {
+        let soma = familia.receita.reduce((soma, i) => soma + i);
+        let somaDespesas = familia.despesas.reduce((soma, i) => soma + i);
+        let resultado = soma - somaDespesas;
+        if (resultado <= 0) {
+          console.log(
+            `o saldo da família esta em defíct e sua divida é de ${resultado.toFixed(
+              2
+            )}`
+          );
+        } else if (resultado > 0) {
+          console.log(
+            `a renda da familia esta em superavict e esse valor é de ${resultado.toFixed(
+              2
+            )}`
+          );
+        }
+      }
+      calculo();*/
+      /* let array = [
+        { nome: "matheus", idade: 23 },
+        { nome: "pedro", idade: 33 },
+        { nome: "maria", idade: 27 },
+      ];
+      //let newArray = array.shift();
+      let numero = 1232;
+      console.log(String(numero).length);*/
+      let fahrenheitToCelsius = function (temperaturaF) {
+        let temperaturaC = ((temperaturaF - 32) * 5) / 9;
+        console.log(
+          `A temperatura em graus Celsius é ${temperaturaC.toFixed(2)}C `
+        );
+      };
+      fahrenheitToCelsius(48);
+
+      function celsiusToFahrenheit(temperaturaC) {
+        let temperaturaF = (temperaturaC * 9) / 5 + 32;
+        return temperaturaF;
+      }
+      let troca = celsiusToFahrenheit(78);
+      console.log(`a temperatura em graus fahrenheit é ${troca}`);
+      /*let numeros = [1, 4, 5, 769, 34];
+      let soma = 0;
+      function sum() {
+        for (i = 0; i < numeros.length; i++) {
+          soma += numeros[i];
+        }
+        return soma;
+      }
+      sum();
+      console.log(soma);*/
+    </script>
+  </body>
+</html>
