@@ -4,13 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Noto+Sans+Display:wght@200;400;700&family=Nunito:wght@400;700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div><p id="demo"></p></div>
+    <header><h1>Calculadora DNC</h1></header>
+    <div id="container">
+      <label for="">Qual numero deseja calcular </label>
+      <input type="number" placeholder="digite um numero" id="num" />
+      <label for="">Até que número?</label>
+      <input type="number" placeholder="digite um numero" id="end" />
+      <input
+        type="button"
+        value="Calcular"
+        onclick="multiplicar()"
+        id="button"
+      />
+      <div id="resposta">Preencha os valores acima</div>
+    </div>
 
     <script>
+      function multiplicar() {
+        var num = window.document.getElementById("num");
+        var end = window.document.getElementById("end");
+        var n = Number(num.value);
+        var e = Number(end.value);
+        var resp = "";
+        var contador = 0;
+        var resposta = window.document.getElementById("resposta");
+        resposta.innerHTML = `a tabuado do ${n} é <br>`;
+        do {
+          resp = n * contador;
+          resposta.innerHTML += `${contador}x${n}=${resp} <br>`;
+          contador++;
+        } while (contador <= e);
+      }
+      // document.querySelectorAll(.class)    seleciona o elemento como se fosse no css
       //var possui hosting
       //let nao existe hosting
       //const nao possui hosting
@@ -102,7 +135,7 @@
       //let newArray = array.shift();
       let numero = 1232;
       console.log(String(numero).length);*/
-      let fahrenheitToCelsius = function (temperaturaF) {
+      /*let fahrenheitToCelsius = function (temperaturaF) {
         let temperaturaC = ((temperaturaF - 32) * 5) / 9;
         console.log(
           `A temperatura em graus Celsius é ${temperaturaC.toFixed(2)}C `
@@ -116,7 +149,7 @@
       }
       let troca = celsiusToFahrenheit(78);
       console.log(`a temperatura em graus fahrenheit é ${troca}`);
-      /*let numeros = [1, 4, 5, 769, 34];
+      let numeros = [1, 4, 5, 769, 34];
       let soma = 0;
       function sum() {
         for (i = 0; i < numeros.length; i++) {
